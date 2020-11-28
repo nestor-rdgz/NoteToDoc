@@ -1,6 +1,6 @@
 import pandas as pd
 from bs4 import BeautifulSoup
-from docx import Document      #https://python-docx.readthedocs.io/en/latest/
+from docx import Document      #Documentation: https://python-docx.readthedocs.io/en/latest/
 
 biblio = pd.read_csv('exported.csv')
 biblio_sim = biblio[['Item Type', 'Publication Year', 'Title', 'Author', 'Notes', 'Url']]
