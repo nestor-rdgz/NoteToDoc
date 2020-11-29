@@ -1,12 +1,12 @@
 # NoteToDoc
 
-Before using the Python script, make sure you have the necessary packages already installed in your device by running:
+1. Before using the Python script, make sure you have the necessary packages already installed in your device by running:
 
 `python -m pip install -r requirements.txt`
 
-After that, to properly run the script, export you bibliography elements from Zotero to a .CSV file and name it: `exported.csv`
+2. After that, to properly run the script, export you bibliography elements from Zotero to a .CSV file and name it: `exported.csv`
 
-After that, just place the `notetodoc.py` script in the same folder as you CSV file, and open execute it using the command line:
+3. Finally, just place the `notetodoc.py` script in the same folder as you CSV file, and open execute it using the command line:
 
 `python notetodoc.py`
 
