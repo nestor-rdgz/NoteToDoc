@@ -34,9 +34,29 @@ for i in range(rows):
     paragraph_text ="Title: "+title+"\nBY: "+authors+"\nYear: "+year+"\nType of publication: "+item_type+"\nUrl: "+url+"\n NOTES: \n"+notes_text+"\n\n\n"
     
     #The information is written into the .docx file
-    documento.add_paragraph(paragraph_text)
+    #The title is inserted
+    documento.add_heading("Title: "+title, 1)
 
-    #The paragraph is written into the .txt file
+    #The Author is inserted
+    p = documento.add_paragraph("")
+    p.add_run("Authors: ").bold = True
+    p.add_run(authors).italic = True
+
+    #The Year, publication type and url are inserted
+    p = documento.add_paragraph("")
+    p.add_run("Year: ").bold = True
+    p.add_run(year[0:4])
+    p.add_run("\nPublication type: ").bold = True
+    p.add_run(item_type)
+    p.add_run("\nURL: ").bold = True
+    p.add_run(url)
+
+    #The Notes is inserted
+    p = documento.add_paragraph("")
+    p.add_run("NOTES: \n").bold = True
+    p.add_run(notes_text)
+
+    #The entire information is written into the .txt file
     textfile.write(paragraph_text)
  
 textfile.close()
