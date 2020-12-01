@@ -28,7 +28,7 @@ for i in range(rows):
 
     #As the notes are in HTML format, it is necessary to extract only the text
     soup = BeautifulSoup(notes, features='lxml')
-    notes_text = soup.get_text()
+    notes_text = soup.get_text('\n').replace('\n \n', '\n').replace('\n \n \n', '\n')
     
     #The paragraph with all the relevant information is built
     paragraph_text ="Title: "+title+"\nBY: "+authors+"\nYear: "+year+"\nType of publication: "+item_type+"\nUrl: "+url+"\n NOTES: \n"+notes_text+"\n\n\n"
@@ -57,7 +57,7 @@ for i in range(rows):
     p.add_run(notes_text)
 
     #The entire information is written into the .txt file
-    textfile.write(paragraph_text)
+    #textfile.write(paragraph_text)
  
 textfile.close()
 documento.save("notes.docx")
