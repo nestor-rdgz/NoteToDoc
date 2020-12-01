@@ -57,7 +57,7 @@ for i in range(rows):
     p.add_run(notes_text)
 
     #The entire information is written into the .txt file
-    #textfile.write(paragraph_text)
+    textfile.write(paragraph_text)
  
 textfile.close()
 documento.save("notes.docx")
