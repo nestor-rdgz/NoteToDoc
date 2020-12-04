@@ -2,7 +2,10 @@ from pandas import read_csv
 from bs4 import BeautifulSoup
 from docx import Document      #Documentation: https://python-docx.readthedocs.io/en/latest/
 
-biblio = read_csv('exported.csv')
+if __name__ == "__main__": 
+    import sys
+    biblio = read_csv(sys.argv[1])
+
 biblio_sim = biblio[['Item Type', 'Publication Year', 'Title', 'Author', 'Notes', 'Url']]
 biblio_sim = biblio_sim.fillna('empty')
 
