@@ -64,5 +64,5 @@ for i in range(rows):
  
 textfile.close()
 documento.save("notes.docx")
-print("notes.docx file generated successfully!")
+print("\n  notes.docx file generated successfully!")
 
