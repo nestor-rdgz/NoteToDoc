@@ -9,11 +9,14 @@ This Python script generates a .docx and .txt file containing all the bibliograp
 
 3. Finally, just place the `notetodoc.py` file in the same folder as you CSV file, and execute it using the command line:
     
-    `python notetodoc.py [name of your csv].csv`
+    `python notetodoc.py [name of your csv].csv `
 
-And that's all! Two files will appear afterwards:
-* `notes.docx`
-* `notes.txt`
+    or specifiying the name of the output file
+
+    `python notetodoc.py [name of your csv].csv [name for the output file].docx`
+
+And that's all! A .docx file will appear afterwards:
+* `[name you specified].docx` or, if you did not specify a name for the output, `notes.docx`
 
 
 *Although the file is .docx, you can open it with LibreOffice Writer*

@@ -5,6 +5,13 @@ from docx import Document      #Documentation: https://python-docx.readthedocs.i
 if __name__ == "__main__": 
     import sys
     biblio = read_csv(sys.argv[1])
+    #You can specify the name of the .docx output file
+    if len(sys.argv)>2:
+        docname = str(sys.argv[2])
+        if docname.find(".docx")==(-1):
+            docname = docname+".docx"
+    else:
+        docname = "notes.docx"
 
 biblio_sim = biblio[['Item Type', 'Publication Year', 'Title', 'Author', 'Notes', 'Url']]
 biblio_sim = biblio_sim.fillna('empty')
@@ -54,14 +61,14 @@ for i in range(rows):
     p.add_run(notes_text)
       
     #The paragraph with all the relevant information is built
-    paragraph_text ="Title: "+title+"\nBY: "+authors+"\nYear: "+year+"\nType of publication: "+item_type+"\nUrl: "+url+"\n NOTES: \n"+notes_text+"\n\n\n"
+    #paragraph_text ="Title: "+title+"\nBY: "+authors+"\nYear: "+year+"\nType of publication: "+item_type+"\nUrl: "+url+"\n NOTES: \n"+notes_text+"\n\n\n"
     #The .txt file is initiated
-    textfile = open('notes.txt', "w+")
+    #textfile = open('notes.txt', "w+")
     #The entire information is written into the .txt file
-    textfile.write(paragraph_text)
+    #textfile.write(paragraph_text)
 
 #Closing files
-textfile.close()
-documento.save("notes.docx")
-print("\n  notes.docx file generated successfully!")
+#textfile.close()
+documento.save(docname)
+print("\n"+" "+docname+" file generated successfully!\n")
 
