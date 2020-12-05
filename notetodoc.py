@@ -17,7 +17,7 @@ textfile = open('notes.txt', "w+")
 
 #The .docx file is initiated
 documento = Document()
-documento.add_heading('References notes', 0)
+documento.add_heading('Notes from references', 0)
 
 for i in range(rows):
     #Each row is a bibliography element
