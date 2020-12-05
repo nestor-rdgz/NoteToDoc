@@ -59,7 +59,8 @@ for i in range(rows):
     textfile = open('notes.txt', "w+")
     #The entire information is written into the .txt file
     textfile.write(paragraph_text)
- 
+
+#Closing files
 textfile.close()
 documento.save("notes.docx")
 print("\n  notes.docx file generated successfully!")
