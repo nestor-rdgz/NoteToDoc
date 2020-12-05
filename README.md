@@ -1,6 +1,7 @@
 # NoteToDoc Python Script
-This Python script generates a .docx and .txt file containing all the bibliography and the notes taken in [Zotero](https://www.zotero.org/) *(previously exported in a .csv file)*, to ease the process of writing papers (e.g. surveys and reviews) and thesis. 
+This Python script generates a .docx file containing the bibliography and the notes taken in [Zotero](https://www.zotero.org/) *(previously exported in a .csv file)*, to ease the process of writing papers (e.g. surveys and reviews) and thesis. 
 
+## How to use the script?
 1. Before using the Python script, make sure you have the necessary packages already installed in your system by running:
     
     `python -m pip install -r requirements.txt`
