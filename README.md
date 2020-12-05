@@ -13,7 +13,7 @@ This Python script generates a .docx and .txt file containing all the bibliograp
 
     or specifiying the name of the output file
 
-    `python notetodoc.py [name of your csv].csv [name of the output file].docx`
+    `python notetodoc.py [name of your csv].csv [name for the output file].docx`
 
 And that's all! A .docx file will appear afterwards:
 * `[name you specified].docx` or, if you did not specify a name for the output, `notes.docx`
