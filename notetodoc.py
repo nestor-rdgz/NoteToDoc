@@ -12,9 +12,6 @@ biblio_sim = biblio_sim.fillna('empty')
 shape = biblio_sim.shape
 rows = shape[0]
 
-#The .txt file is initiated
-textfile = open('notes.txt', "w+")
-
 #The .docx file is initiated
 documento = Document()
 documento.add_heading('Notes from references', 0)
@@ -32,10 +29,7 @@ for i in range(rows):
     #As the notes are in HTML format, it is necessary to extract only the text
     soup = BeautifulSoup(notes, features='lxml')
     notes_text = soup.get_text('\n').replace('\n \n', '\n').replace('\n \n \n', '\n')
-    
-    #The paragraph with all the relevant information is built
-    paragraph_text ="Title: "+title+"\nBY: "+authors+"\nYear: "+year+"\nType of publication: "+item_type+"\nUrl: "+url+"\n NOTES: \n"+notes_text+"\n\n\n"
-    
+          
     #The information is written into the .docx file
     #The title is inserted
     documento.add_heading("Title: "+title, 1)
@@ -54,11 +48,15 @@ for i in range(rows):
     p.add_run("\nURL: ").bold = True
     p.add_run(url)
 
-    #The Notes is inserted
+    #The Notes are inserted
     p = documento.add_paragraph("")
     p.add_run("NOTES: \n").bold = True
     p.add_run(notes_text)
-
+      
+    #The paragraph with all the relevant information is built
+    paragraph_text ="Title: "+title+"\nBY: "+authors+"\nYear: "+year+"\nType of publication: "+item_type+"\nUrl: "+url+"\n NOTES: \n"+notes_text+"\n\n\n"
+    #The .txt file is initiated
+    textfile = open('notes.txt', "w+")
     #The entire information is written into the .txt file
     textfile.write(paragraph_text)
  
