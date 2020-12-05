@@ -14,3 +14,6 @@ This Python script generates a .docx and .txt file containing all the bibliograp
 And that's all! Two files will appear afterwards:
 * `notes.docx`
 * `notes.txt`
+
+
+*Although the file is .docx, you can open it with LibreOffice Writer*
