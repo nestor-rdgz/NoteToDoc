@@ -19,5 +19,8 @@ This Python script generates a .docx file containing the bibliography and the no
 And that's all! A .docx file will appear afterwards:
 * `[name you specified].docx` or, if you did not specify a name for the output, `notes.docx`
 
-
 *Although the file is .docx, you can open it with LibreOffice Writer*
+
+## Example
+`python notetodoc.py power_electronics.csv ACDC_notes.docx`
+
