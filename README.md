@@ -8,7 +8,7 @@ This Python script generates a .docx file containing the bibliography and the no
 
 2. After that, to properly run the script, export you bibliography elements from Zotero to a .CSV file
 
-3. Finally, just place the `notetodoc.py` file in the same folder as you CSV file, and execute it using the command line:
+3. Clone this repository and just place the your .csv file in the same folder. Execute the script using the command line:
     
     `python notetodoc.py [name of your csv].csv `
 
