@@ -1,3 +1,10 @@
+#! python3
+
+'''
+    Name: notetodoc.py
+    GitHub URL: https://github.com/nestor-rdgz/NoteToDoc
+    License: GNU General Public License v3.0
+'''
 from pandas import read_csv
 from bs4 import BeautifulSoup
 from docx import Document      #Documentation: https://python-docx.readthedocs.io/en/latest/
