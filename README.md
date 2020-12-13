@@ -1,4 +1,9 @@
 # NoteToDoc Python Script
+![GitHub](https://img.shields.io/github/license/nestor-rdgz/NoteTOdOC?color=blue)
+![GitHub last commit](https://img.shields.io/github/last-commit/nestor-rdgz/NoteToDoc?color=blue&label=Last%20commit)
+![GitHub Repo stars](https://img.shields.io/github/stars/nestor-rdgz/NoteToDoc?color=yellow&label=Stars)
+![GitHub forks](https://img.shields.io/github/forks/nestor-rdgz/NoteToDoc?style=social)
+
 This Python script generates a .docx file containing the bibliography and the notes taken in [Zotero](https://www.zotero.org/) *(previously exported in a .csv file)*, to ease the process of writing papers (e.g. surveys and reviews) and thesis. 
 
 ## How to use the script?
@@ -8,7 +13,7 @@ This Python script generates a .docx file containing the bibliography and the no
 
 2. After that, to properly run the script, export you bibliography elements from Zotero to a .CSV file
 
-3. Clone this repository and just place the your .csv file in the same folder. Execute the script using the command line:
+3. Clone this repository and just place your .csv file in the same folder. Execute the script using the command line:
     
     `python notetodoc.py [name of your csv].csv `
 
