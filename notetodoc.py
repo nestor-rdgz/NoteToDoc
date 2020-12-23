@@ -67,15 +67,7 @@ for i in range(rows):
     p.add_run("NOTES: \n").bold = True
     p.add_run(notes_text)
       
-    #The paragraph with all the relevant information is built
-    #paragraph_text ="Title: "+title+"\nBY: "+authors+"\nYear: "+year+"\nType of publication: "+item_type+"\nUrl: "+url+"\n NOTES: \n"+notes_text+"\n\n\n"
-    #The .txt file is initiated
-    #textfile = open('notes.txt', "w+")
-    #The entire information is written into the .txt file
-    #textfile.write(paragraph_text)
-
 #Closing files
-#textfile.close()
 documento.save(docname)
 print("\n"+" "+docname+" file generated successfully!\n")
 
